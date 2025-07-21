@@ -1,6 +1,9 @@
 {
-  "name": "international-phone-validator",
-  "version": "1.0.1",
+  "name": "@sierra-technologies/international-phone-validator",
+  "version": "1.0.2",
+  "publishConfig": {
+    "@sierra-technologies:registry": "https://npm.pkg.github.com"
+  },
   "description": "A comprehensive phone number validation and formatting library for international phone numbers",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -19,7 +22,10 @@
     "lint:fix": "eslint src/**/*.js --fix",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test && npm run lint",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "publish:github": "npm publish --registry=https://npm.pkg.github.com",
+    "publish:npm": "npm publish --registry=https://registry.npmjs.org",
+    "publish:all": "npm run publish:npm && npm run publish:github"
   },
   "keywords": [
     "phone",
