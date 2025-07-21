@@ -1,6 +1,6 @@
 {
   "name": "international-phone-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A comprehensive phone number validation and formatting library for international phone numbers",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
