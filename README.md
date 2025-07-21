@@ -385,9 +385,7 @@ npm run test:coverage   # With coverage report
 ## Roadmap
 
 - [ ] Add more countries (South America, Africa, Asia)
-- [ ] Mobile/landline distinction
 - [ ] Carrier detection
-- [ ] Number portability data
 - [ ] React/Vue components
 - [ ] CLI tool for batch processing
 
