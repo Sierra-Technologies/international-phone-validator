@@ -1,5 +1,5 @@
 {
-  "name": "@sierra-technologies/international-phone-validator",
+  "name": "international-phone-validator",
   "version": "1.0.3",
   "publishConfig": {
     "@sierra-technologies:registry": "https://npm.pkg.github.com"
