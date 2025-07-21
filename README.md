@@ -1,8 +1,9 @@
 # International Phone Validator
 
-[![npm version](https://badge.fury.io/js/international-phone-validator.svg)](https://www.npmjs.com/package/international-phone-validator)
+[![npm version](https://img.shields.io/npm/v/international-phone-validator.svg)](https://www.npmjs.com/package/international-phone-validator)
+[![npm downloads](https://img.shields.io/npm/dm/international-phone-validator.svg)](https://www.npmjs.com/package/international-phone-validator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Test Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](https://github.com/yourusername/international-phone-validator)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](https://github.com/Sierra-Technologies/international-phone-validator)
 
 A lightweight, fast, and comprehensive phone number validation and formatting library for international phone numbers. Perfect for telecom applications, contact forms, and user registration systems.
 
