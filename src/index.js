@@ -228,69 +228,69 @@ class PhoneValidator {
     
     // Format based on country
     switch (countryKey) {
-      case 'US':
-      case 'CA':
-        if (digits.length === 10) {
-          return `+${countryData.code} (${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
-        }
-        break;
-      case 'UK':
-        return `+${countryData.code} ${digits.slice(0,4)} ${digits.slice(4,7)} ${digits.slice(7)}`;
-      case 'DE':
-        return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3)}`;
-      case 'FR':
-        if (digits.length === 9) {
-          return `+${countryData.code} ${digits.slice(0,1)} ${digits.slice(1,3)} ${digits.slice(3,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
-        }
-        break;
-      case 'IN':
-        return `+${countryData.code} ${digits.slice(0,5)} ${digits.slice(5)}`;
-      case 'BR':
-        if (digits.length === 11) {
-          return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,7)}-${digits.slice(7)}`;
-        }
-        break;
+    case 'US':
+    case 'CA':
+      if (digits.length === 10) {
+        return `+${countryData.code} (${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+      }
+      break;
+    case 'UK':
+      return `+${countryData.code} ${digits.slice(0,4)} ${digits.slice(4,7)} ${digits.slice(7)}`;
+    case 'DE':
+      return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3)}`;
+    case 'FR':
+      if (digits.length === 9) {
+        return `+${countryData.code} ${digits.slice(0,1)} ${digits.slice(1,3)} ${digits.slice(3,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
+      }
+      break;
+    case 'IN':
+      return `+${countryData.code} ${digits.slice(0,5)} ${digits.slice(5)}`;
+    case 'BR':
+      if (digits.length === 11) {
+        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,7)}-${digits.slice(7)}`;
+      }
+      break;
       
       // West Africa formatting
-      case 'SL':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'NG':
-        return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
-      case 'GH':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'LR':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'GN':
-        return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
-      case 'CI':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
-      case 'SN':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
-      case 'ML':
-      case 'BF':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
-      case 'GW':
-        return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3)}`;
+    case 'SL':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'NG':
+      return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
+    case 'GH':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'LR':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'GN':
+      return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
+    case 'CI':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
+    case 'SN':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
+    case 'ML':
+    case 'BF':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
+    case 'GW':
+      return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3)}`;
         
       // East Africa formatting
-      case 'KE':
-      case 'TZ':
-      case 'UG':
-      case 'RW':
-      case 'ET':
-        return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
+    case 'KE':
+    case 'TZ':
+    case 'UG':
+    case 'RW':
+    case 'ET':
+      return `+${countryData.code} ${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
         
       // Southern Africa formatting
-      case 'ZA':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'ZW':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'BW':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'ZM':
-        return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      default:
-        return `+${countryData.code} ${digits}`;
+    case 'ZA':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'ZW':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'BW':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'ZM':
+      return `+${countryData.code} ${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    default:
+      return `+${countryData.code} ${digits}`;
     }
     
     return `+${countryData.code} ${digits}`;
@@ -327,58 +327,58 @@ class PhoneValidator {
     
     // Format based on country
     switch (countryKey) {
-      case 'US':
-      case 'CA':
-        if (digits.length === 10) {
-          return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
-        }
-        break;
-      case 'UK':
-        return `0${digits.slice(0,4)} ${digits.slice(4,7)} ${digits.slice(7)}`;
-      case 'DE':
-        return `0${digits.slice(0,3)} ${digits.slice(3)}`;
-      case 'FR':
-        if (digits.length === 9) {
-          return `0${digits.slice(0,1)} ${digits.slice(1,3)} ${digits.slice(3,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
-        }
-        break;
+    case 'US':
+    case 'CA':
+      if (digits.length === 10) {
+        return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+      }
+      break;
+    case 'UK':
+      return `0${digits.slice(0,4)} ${digits.slice(4,7)} ${digits.slice(7)}`;
+    case 'DE':
+      return `0${digits.slice(0,3)} ${digits.slice(3)}`;
+    case 'FR':
+      if (digits.length === 9) {
+        return `0${digits.slice(0,1)} ${digits.slice(1,3)} ${digits.slice(3,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
+      }
+      break;
         
       // West Africa national formatting
-      case 'SL':
-        return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'NG':
-        return `0${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
-      case 'GH':
-        return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'LR':
-        return digits; // Liberia doesn't use leading 0 in national format
-      case 'GN':
-        return digits.slice(0,3) + ' ' + digits.slice(3,6) + ' ' + digits.slice(6);
-      case 'CI':
-        return `${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
-      case 'SN':
-        return `${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
-      case 'ML':
-      case 'BF':
-        return `${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
-      case 'GW':
-        return digits.slice(0,3) + ' ' + digits.slice(3);
+    case 'SL':
+      return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'NG':
+      return `0${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
+    case 'GH':
+      return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'LR':
+      return digits; // Liberia doesn't use leading 0 in national format
+    case 'GN':
+      return digits.slice(0,3) + ' ' + digits.slice(3,6) + ' ' + digits.slice(6);
+    case 'CI':
+      return `${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
+    case 'SN':
+      return `${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5,7)} ${digits.slice(7)}`;
+    case 'ML':
+    case 'BF':
+      return `${digits.slice(0,2)} ${digits.slice(2,4)} ${digits.slice(4,6)} ${digits.slice(6)}`;
+    case 'GW':
+      return digits.slice(0,3) + ' ' + digits.slice(3);
         
       // East/Southern Africa national formatting
-      case 'KE':
-      case 'TZ':
-      case 'UG':
-      case 'RW':
-      case 'ET':
-        return `0${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
-      case 'ZA':
-        return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
-      case 'ZW':
-      case 'BW':
-      case 'ZM':
-        return digits.slice(0,2) + ' ' + digits.slice(2,5) + ' ' + digits.slice(5);
-      default:
-        return digits;
+    case 'KE':
+    case 'TZ':
+    case 'UG':
+    case 'RW':
+    case 'ET':
+      return `0${digits.slice(0,3)} ${digits.slice(3,6)} ${digits.slice(6)}`;
+    case 'ZA':
+      return `0${digits.slice(0,2)} ${digits.slice(2,5)} ${digits.slice(5)}`;
+    case 'ZW':
+    case 'BW':
+    case 'ZM':
+      return digits.slice(0,2) + ' ' + digits.slice(2,5) + ' ' + digits.slice(5);
+    default:
+      return digits;
     }
     
     return digits;

@@ -161,7 +161,7 @@ describe('PhoneValidator', () => {
 
     test('should format UK numbers nationally', () => {
       const formatted = validator.formatNational('+44 7700 900123', 'UK');
-      expect(formatted).toMatch(/^\d{4} \d{3} \d{3}$/);
+      expect(formatted).toMatch(/^0\d{4} \d{3} \d{3}$/);
     });
 
     test('should format German numbers nationally', () => {
